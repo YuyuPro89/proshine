@@ -291,13 +291,13 @@ namespace PROShine.Views
         private void Parent_KeyDown(object sender, KeyEventArgs e)
         {
             e.Handled = true;
-            if (e.Key == Key.Add)
+            if (e.Key == Key.Add || e.Key == Key.OemPlus)
             {
                 _cellWidth += 2;
                 if (_cellWidth > 64) _cellWidth = 64;
                 RefreshMap();
             }
-            else if (e.Key == Key.Subtract)
+            else if (e.Key == Key.Subtract || e.Key == Key.OemMinus)
             {
                 _cellWidth -= 2;
                 if (_cellWidth < 4) _cellWidth = 4;
